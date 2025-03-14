@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
-# @Author  : Chao Deng
-# @Email   : dengch26@mail2.sysu.edu.cn
+# @Author  : Anonymous
+# @Email   : Anonymous
 
 
 import torch

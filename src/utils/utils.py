@@ -111,7 +111,7 @@ def get_time():
 import inspect
 import os
 
-ROOT_PATH = 'C:/codes/RtMIPSRec'
+ROOT_PATH = 'C:/codes/MIFARec'
 def print_log(str):
     current_frame = inspect.currentframe()
     caller_frame = current_frame.f_back

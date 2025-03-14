@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
-# @Author  : Chao Deng
-# @Email   : dengch26@mail2.sysu.edu.cn
+# @Author  : Anonymous
+# @Email   : Anonymous
 
 
 import os
@@ -74,7 +74,7 @@ def main():
         data_dict[phase].prepare()
 
     # 训练模型前构建物品间相似度矩阵
-    if 'RtMIPSRec' in init_args.model_name:
+    if 'MIFARec' in init_args.model_name:
         model.get_gram_matrix(data_dict['train'])
 
     # 训练模型
@@ -162,9 +162,9 @@ def save_rec_results(dataset, runner, topk):
 if __name__ == '__main__':
 
     is_handler_added = 0  # for logging repeat issue.
-    model_name_default = 'RtMIPSRec'
+    model_name_default = 'MIFARec'
 
-    for dataset_default in ['Amazon_Beauty', 'Amazon_Video_Games', 'FourSquare_NYC', 'FourSquare_TKY', 'Gowalla']:
+    for dataset_default in ['Amazon_Video_Games', 'Amazon_Beauty', 'FourSquare_NYC', 'FourSquare_TKY', 'Gowalla']:
         init_parser = argparse.ArgumentParser(description='Model')
         init_parser.add_argument('--model_name', type=str, default=model_name_default, help='Choose a model to run.')
         init_parser.add_argument('--model_mode', type=str, default='', 
